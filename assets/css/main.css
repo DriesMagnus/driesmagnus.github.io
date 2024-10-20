@@ -1225,7 +1225,7 @@ button {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -1808,9 +1808,84 @@ body.is-preload #footer {
   margin: 10px;
 }
 
+/* Work */
+
+#filter-buttons button.active {
+  background-color: #fff;
+  color: black !important;
+  margin-bottom: 1rem;
+}
+
+#work .collapsible {
+  cursor: pointer;
+  user-select: none;
+  transition: letter-spacing 0.3s ease-out;
+}
+
+#work .collapsible:hover {
+  letter-spacing: 6px;
+}
+
+#work .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#work th:nth-child(3),
+td:nth-child(3) {
+  text-align: center;
+}
+
+#work td:nth-child(3) {
+  letter-spacing: 2px;
+}
+
+/* Add an arrow icon to indicate collapsible functionality */
+#work .collapsible::after {
+  content: "\25BC"; /* Down arrow */
+  color: #777;
+  float: left;
+  margin-right: 5px;
+}
+
+#work .collapsible.active::after {
+  content: "\25B2"; /* Up arrow */
+}
+
+/* Optional: Styling for the expanded content */
+.content.expanded {
+  max-height: none;
+}
+
+.highlighted {
+  animation: highlightFade 1s ease-in-out;
+}
+
+@keyframes highlightFade {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+}
+
 /* Contact */
 
-#contact .icons {
+#contact h4 {
+  margin-bottom: 50px;
+}
+
+#contact hr {
+  margin: 1.5rem 0;
+}
+
+#contact .icons,
+h4 {
   text-align: center;
 }
 
@@ -1822,6 +1897,48 @@ body.is-preload #footer {
   #contact .icons li {
     margin: auto;
   }
+}
+
+/* navbar for all articles */
+
+article nav ul {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  /* margin-bottom: 0; */
+  list-style: none;
+  border: solid 1px #ffffff;
+  border-radius: 4px;
+}
+
+article nav ul li {
+  padding-left: 0;
+  border-left: solid 1px #ffffff;
+}
+
+article nav ul li:first-child {
+  border-left: 0;
+}
+
+article nav ul li a {
+  display: block;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1.25rem 0 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  border-bottom: 0;
+}
+
+article nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+article nav ul li a:active {
+  background-color: rgba(255, 255, 255, 0.175);
 }
 
 /* iframes */
