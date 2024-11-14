@@ -1826,18 +1826,36 @@ body.is-preload #footer {
   letter-spacing: 6px;
 }
 
+#liquipedia-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+#liquipedia-button blockquote {
+  padding-left: 1rem;
+}
+
 #work .content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#work th:nth-child(3),
-td:nth-child(3) {
+#work th:nth-child(1),
+th:nth-child(4),
+td:nth-child(1),
+td:nth-child(4) {
   text-align: center;
 }
 
-#work td:nth-child(3) {
+#work th,
+td {
+  align-content: center;
+}
+
+#work td:nth-child(4) {
   letter-spacing: 2px;
 }
 
@@ -1872,6 +1890,20 @@ td:nth-child(3) {
   100% {
     background-color: rgba(255, 255, 255, 0.075);
   }
+}
+
+.logo-cell {
+  width: 50px;
+  text-align: center;
+}
+
+.tournament-logo {
+  width: 40px;
+  height: auto;
+}
+
+.logo-cell img {
+  vertical-align: middle;
 }
 
 /* Contact */

@@ -58,7 +58,7 @@
         <p>
           Hi there! Thank you for checking out my portfolio!<br />
           My name is Dries Magnus, but I go by "Magnum". I am a 23 year old
-          student and aspiring observer from Belgium.
+          student and esports observer from Belgium.
         </p>
         <div id="about-row">
           <blockquote>
@@ -110,7 +110,16 @@
           <hr />
         </div>
         <h3 class="collapsible major active"><i class="fas fa-calendar-check"></i> Events</h3>
-        <div class="content" style="max-height: 1000px;">
+        <div class="content" style="max-height: 2000px;">
+          <!-- Liquipedia Button -->
+          <div id="liquipedia-button">
+            <p><a href="https://liquipedia.net/valorant/MagnumOBS" target="_blank" rel="noopener noreferrer"
+                style="border-bottom: 0;"><img class="image" src="images/logos/liquipedia.png" alt=""
+                  style="max-height: 3em; vertical-align: middle;" /></a></p>
+            <blockquote>
+              My Liquipedia page
+            </blockquote>
+          </div>
 
           <!-- Filter Buttons with highlight class -->
           <div id="filter-buttons">
@@ -122,86 +131,90 @@
 
           <!-- Events Tables -->
           <div id="events-tables">
-
-            <!-- Overview Table (Example Data) -->
             <div id="overview-table">
               <table>
                 <thead>
                   <tr>
+                    <th>Logo</th>
                     <th>Event</th>
                     <th>Role</th>
-                    <th>More Info</th>
+                    <th>Info</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/63a1bab613582.png">
+                    <td class="logo-cell"></td>
                     <td>VCL North: Polaris 2024 Split 1 + 2</td>
                     <td>POV OBS</td>
                     <td><a href="#work" onclick="showYearAndHighlight('2024', [1, 2])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/604be13d01964.png">
+                    <td class="logo-cell"></td>
                     <td>VCT Game Changers EMEA 2024</td>
                     <td>Producer + GFX</td>
                     <td><a href="#work" onclick="showYearAndHighlight('2024', [3, 4])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/615f3ad99dbe3.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Home Ground 2024 BE + NL</td>
                     <td>POV OBS</td>
-                    <td><a href="#work" onclick="showYearAndHighlight('2024', [5, 6])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                    <td><a href="#work" onclick="showYearAndHighlight('2024', [5, 6]); scrollDown()"
+                        rel="noopener noreferrer" style="border-bottom: 0;"><i
+                          class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://upload.wikimedia.org/wikipedia/en/6/6f/TwitchCon_Logo_2024.png">
+                    <td class="logo-cell"></td>
                     <td>TwitchCon Europe: Escape from Tarkov Arena</td>
                     <td>POV OBS</td>
-                    <td><a href="#work" onclick="showYearAndHighlight('2024', [9])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                    <td><a href="#work" onclick="showYearAndHighlight('2024', [9]); scrollDown()"
+                        rel="noopener noreferrer" style="border-bottom: 0;"><i
+                          class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/60f03e4f04291.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Campus Clutch 2023 Belgium</td>
                     <td>Solo OBS</td>
                     <td><a href="#work" onclick="showYearAndHighlight('2023', [1])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/60f03e4f04291.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Campus Clutch 2022 Netherlands</td>
                     <td>Solo OBS</td>
                     <td><a href="#work" onclick="showYearAndHighlight('2022', [1])" rel="noopener noreferrer"
-                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a>
-                    </td>
+                        style="border-bottom: 0;"><i class="fas fa-arrow-circle-right"></i></a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <!-- 2024 Table (Example Data) -->
+            <!-- 2024 Table -->
             <div id="table-2024" style="display: none;">
               <table>
                 <thead>
                   <tr>
+                    <th>Logo</th>
                     <th>Event</th>
                     <th>Role</th>
                     <th>Link(s)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/63a1bab613582.png">
+                    <td class="logo-cell"></td>
                     <td>VCL North: Polaris Split 1</td>
                     <td>POV OBS</td>
                     <td><a href="https://liquipedia.net/valorant/VCL/2024/Northern_Europe/Split_1" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a> <a
                         href="https://youtu.be/k3WEFEfpVnQ?t=5275" target="_blank" rel="noopener noreferrer"><i
                           class="fas fa-video"></i></a> <a
-                        href="https://www.twitch.tv/videos/2052294194?collection=D0HhV390sBeUnw&t=02h48m34s"
+                        href="https://www.twitch.tv/videos/2052294194?collection=D0HhV390sBeUnw&amp;t=02h48m34s"
                         target="_blank" rel="noopener noreferrer"><i class="fas fa-video"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/63a1bab613582.png">
+                    <td class="logo-cell"></td>
                     <td>VCL North: Polaris Split 2</td>
                     <td>POV OBS</td>
                     <td><a href="https://liquipedia.net/valorant/VCL/2024/North/Split_2" target="_blank"
@@ -209,19 +222,22 @@
                         href="https://youtu.be/UnRsK5Lfh9Y?t=17333" target="_blank" rel="noopener noreferrer"><i
                           class="fas fa-video"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/604be13d01964.png">
+                    <td class="logo-cell"></td>
                     <td>VCT Game Changers EMEA Stage 2</td>
                     <td>Producer + GFX</td>
                     <td><a href="https://liquipedia.net/valorant/VCT/2024/Game_Changers/EMEA/Stage_2" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/604be13d01964.png">
+                    <td class="logo-cell"></td>
                     <td>VCT Game Changers EMEA Stage 3</td>
                     <td>Producer + GFX</td>
                     <td><a href="https://liquipedia.net/valorant/VCT/2024/Game_Changers/EMEA/Stage_3" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/615f3ad99dbe3.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Home Ground Belgium (LAN)</td>
                     <td>POV OBS + GFX</td>
                     <td><a href="https://liquipedia.net/valorant/Red_Bull/Home_Ground/5/Belgium_Qualifier"
@@ -229,7 +245,8 @@
                         href="https://www.twitch.tv/videos/2157341199?t=00h34m08s" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-video"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/615f3ad99dbe3.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Home Ground Netherlands (LAN)</td>
                     <td>POV OBS</td>
                     <td><a href="https://liquipedia.net/valorant/Red_Bull/Home_Ground/5/Netherlands_Qualifier"
@@ -237,7 +254,8 @@
                         href="https://www.twitch.tv/videos/2149176038?t=04h33m52s" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-video"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/60918cde5ed00.png">
+                    <td class="logo-cell"></td>
                     <td>Open Tour France: Stage 3 + 5</td>
                     <td>Solo OBS</td>
                     <td><a href="https://liquipedia.net/valorant/VALORANT_Open_Tour/France/2024/Stage_3" target="_blank"
@@ -245,13 +263,15 @@
                         href="https://liquipedia.net/valorant/VALORANT_Open_Tour/France/2024/Stage_5" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
-                    <td>VCL DACH: Evolution Split 1 (Closed Qualifier)</td>
+                  <tr data-logo-url="https://owcdn.net/img/61efdb456ffec.png">
+                    <td class="logo-cell"></td>
+                    <td>VCL DACH: Evolution Split 1 (Qualifier)</td>
                     <td>Solo OBS</td>
                     <td><a href="https://liquipedia.net/valorant/VCL/2024/DACH/Split_1/Closed_Qualifier" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://upload.wikimedia.org/wikipedia/en/6/6f/TwitchCon_Logo_2024.png">
+                    <td class="logo-cell"></td>
                     <td>TwitchCon Europe: Escape from Tarkov Arena</td>
                     <td>POV OBS</td>
                     <td><a href="https://www.twitch.tv/videos/2184616532?t=01h15m23s" target="_blank"
@@ -268,25 +288,29 @@
               <table>
                 <thead>
                   <tr>
+                    <th>Logo</th>
                     <th>Event</th>
                     <th>Role</th>
                     <th>Link(s)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/60f03e4f04291.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Campus Clutch Belgium</td>
                     <td>Solo OBS (LAN Finals)</td>
                     <td><a href="https://liquipedia.net/valorant/Red_Bull/Campus_Clutch/2023/National_Final/Belgium"
                         target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="./images/logos/Luxe_Invitational.png">
+                    <td class="logo-cell"></td>
                     <td>Luxe Invitational</td>
                     <td>POV + Cinematic</td>
                     <td><a href="https://liquipedia.net/valorant/Luxe_Invitational/Europe" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="./images/logos/EVCxCrunch_White.png">
+                    <td class="logo-cell"></td>
                     <td>EVC x Crunch League Season 1 + 2</td>
                     <td>POV + Cinematic</td>
                     <td><a href="https://liquipedia.net/valorant/EVC_x_Crunch_Valorant_League" target="_blank"
@@ -294,31 +318,36 @@
                         href="https://liquipedia.net/valorant/EVC_x_Crunch_Valorant_League/Season_2" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/6318b23a38b9d.png">
+                    <td class="logo-cell"></td>
                     <td>VTT Winter Split</td>
                     <td>Solo + Cinematic Finals</td>
                     <td><a href="https://liquipedia.net/valorant/Trinity_Trials/2023/Winter_Trial" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/6318b23a38b9d.png">
+                    <td class="logo-cell"></td>
                     <td>VTT Spring Split</td>
                     <td>Solo + Cinematic Finals</td>
                     <td><a href="https://liquipedia.net/valorant/Trinity_Trials/2023/Spring_Trial" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/6318b23a38b9d.png">
+                    <td class="logo-cell"></td>
                     <td>VTT Summer Split</td>
                     <td>Solo + POV Playoffs</td>
                     <td><a href="https://liquipedia.net/valorant/Trinity_Trials/2023/Summer_Trial" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="./images/logos/Esports_Defensie_Cup.png">
+                    <td class="logo-cell"></td>
                     <td>EDC Summer 2023</td>
                     <td>Solo OBS</td>
                     <td><a href="https://www.twitch.tv/videos/1875891232" target="_blank" rel="noopener noreferrer"><i
                           class="fas fa-video"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="./images/logos/Esports_Defensie_Cup.png">
+                    <td class="logo-cell"></td>
                     <td>EDC Fall 2023</td>
                     <td>Solo OBS</td>
                     <td><a href="https://www.twitch.tv/videos/1963178277" target="_blank" rel="noopener noreferrer"><i
@@ -333,25 +362,29 @@
               <table>
                 <thead>
                   <tr>
+                    <th>Logo</th>
                     <th>Event</th>
                     <th>Role</th>
                     <th>Link(s)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/60f03e4f04291.png">
+                    <td class="logo-cell"></td>
                     <td>Red Bull Campus Clutch Netherlands</td>
                     <td>Solo OBS (LAN Finals)</td>
                     <td><a href="https://liquipedia.net/valorant/Red_Bull/Campus_Clutch/2022/National_Final/Netherlands"
                         target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/6318b23a38b9d.png">
+                    <td class="logo-cell"></td>
                     <td>VTT Fall Split + LAN Finals</td>
                     <td>Cinematic</td>
                     <td><a href="https://liquipedia.net/valorant/Trinity_Trials/2022/Fall_Trial" target="_blank"
                         rel="noopener noreferrer"><i class="fas fa-globe"></i></a></td>
                   </tr>
-                  <tr>
+                  <tr data-logo-url="https://owcdn.net/img/63a61cbf88b29.png">
+                    <td class="logo-cell"></td>
                     <td>Get On My Level!</td>
                     <td>Solo OBS</td>
                     <td><a href="https://liquipedia.net/valorant/Get_On_My_Level!" target="_blank"

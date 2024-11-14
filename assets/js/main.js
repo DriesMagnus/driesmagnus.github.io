@@ -414,3 +414,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const rows = document.querySelectorAll("#events-tables tr[data-logo-url]");
+
+  rows.forEach(async (row) => {
+    const logoUrl = row.getAttribute("data-logo-url");
+    const logoCell = row.querySelector(".logo-cell");
+
+    // Placeholder image logic
+    const img = document.createElement("img");
+    img.src = logoUrl;
+    img.alt = "Tournament Logo";
+    img.className = "tournament-logo";
+    logoCell.appendChild(img);
+  });
+});
+
+function scrollDown() {
+  setTimeout(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight, // Scrolls to the bottom of the page
+      behavior: "smooth", // Adds smooth scrolling
+    });
+  }, 0);
+}
