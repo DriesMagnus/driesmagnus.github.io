@@ -335,6 +335,7 @@
 
 function resetActiveButtons() {
   document.getElementById("btn-overview").classList.remove("active");
+  document.getElementById("btn-2025").classList.remove("active");
   document.getElementById("btn-2024").classList.remove("active");
   document.getElementById("btn-2023").classList.remove("active");
   document.getElementById("btn-2022").classList.remove("active");
@@ -344,6 +345,7 @@ function showOverview() {
   resetActiveButtons();
   document.getElementById("btn-overview").classList.add("active");
   document.getElementById("overview-table").style.display = "block";
+  document.getElementById("table-2025").style.display = "none";
   document.getElementById("table-2024").style.display = "none";
   document.getElementById("table-2023").style.display = "none";
   document.getElementById("table-2022").style.display = "none";
@@ -351,21 +353,31 @@ function showOverview() {
 
 function showYear(year) {
   resetActiveButtons();
-  if (year === "2024") {
+  if (year === "2025") {
+    document.getElementById("btn-2025").classList.add("active");
+    document.getElementById("overview-table").style.display = "none";
+    document.getElementById("table-2025").style.display = "block";
+    document.getElementById("table-2024").style.display = "none";
+    document.getElementById("table-2023").style.display = "none";
+    document.getElementById("table-2022").style.display = "none";
+  } else if (year === "2024") {
     document.getElementById("btn-2024").classList.add("active");
     document.getElementById("overview-table").style.display = "none";
+    document.getElementById("table-2025").style.display = "none";
     document.getElementById("table-2024").style.display = "block";
     document.getElementById("table-2023").style.display = "none";
     document.getElementById("table-2022").style.display = "none";
   } else if (year === "2023") {
     document.getElementById("btn-2023").classList.add("active");
     document.getElementById("overview-table").style.display = "none";
+    document.getElementById("table-2025").style.display = "none";
     document.getElementById("table-2024").style.display = "none";
     document.getElementById("table-2023").style.display = "block";
     document.getElementById("table-2022").style.display = "none";
   } else if (year === "2022") {
     document.getElementById("btn-2022").classList.add("active");
     document.getElementById("overview-table").style.display = "none";
+    document.getElementById("table-2025").style.display = "none";
     document.getElementById("table-2024").style.display = "none";
     document.getElementById("table-2023").style.display = "none";
     document.getElementById("table-2022").style.display = "block";
